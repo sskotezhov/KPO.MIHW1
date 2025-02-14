@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: admin
+Build-Jdk: 23.0.2
+Main-Class: main.java.Main
+Created-By: Maven Integration for Eclipse
+
