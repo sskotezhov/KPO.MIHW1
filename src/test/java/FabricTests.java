@@ -34,4 +34,30 @@ public class FabricTests {
 		assertEquals(animal.getNumber(), 1);
 		in.close();
 	}
+	@Test
+	public void testGoodPatientTiger()
+	{
+		Scanner in = new Scanner("6");
+		Fabric fabric = new Fabric();
+		Animals animal = fabric.create_animal("Tiger", 10000, false, in);
+		assertEquals(animal.getName(), "Tiger");
+		assertEquals(animal.getFood(), 10000);
+		assertEquals(animal.isHealthy(), false);
+		assertEquals(animal.isKind(), false);
+		assertEquals(animal.getNumber(), 0);
+		in.close();
+	}
+	@Test
+	public void BadResponse()
+	{
+		Scanner in = new Scanner("6");
+		Fabric fabric = new Fabric();
+		Animals animal = fabric.create_animal("CHECHE", 10000, false, in);
+		assertEquals(animal.getName(), "Animal");
+		assertEquals(animal.getFood(), -1);
+		assertEquals(animal.isHealthy(), false);
+		assertEquals(animal.isKind(), false);
+		assertEquals(animal.getNumber(), -1);
+		in.close();
+	}
 }

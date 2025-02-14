@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Zoo {
 	private ArrayList<Animals> collection;
 	private int count_food = 0, count_animals = 0;
-	Zoo()
+	public Zoo()
 	{
 		collection = new ArrayList<>();
 	}

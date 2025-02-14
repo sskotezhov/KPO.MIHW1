@@ -2,6 +2,7 @@ package main.java;
 import java.util.Scanner;
 
 public class App {
+	public int condition;
 	private Zoo zoo = new Zoo();
 	private Fabric creator = new Fabric();
 	private Clinic clinic = new Clinic(zoo);
@@ -51,7 +52,7 @@ public class App {
 					System.out.println("Не понял запроса");
 					break;
 				}
-			}
+			} 
 		}
 	}
 	

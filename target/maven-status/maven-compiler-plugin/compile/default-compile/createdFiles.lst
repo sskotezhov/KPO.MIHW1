@@ -8,6 +8,7 @@ main\java\Main.class
 main\java\Thing.class
 main\java\Wolf.class
 main\java\Computer.class
+test\java\AppTest.class
 main\java\Herbo.class
 main\java\Zoo.class
 main\java\IInventory.class
@@ -15,5 +16,6 @@ test\java\FabricTests.class
 main\java\IAlive.class
 main\java\Tiger.class
 main\java\Clinic.class
+test\java\ClinicTest.class
 main\java\Table.class
 main\java\Predator.class

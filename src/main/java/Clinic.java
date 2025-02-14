@@ -2,7 +2,7 @@ package main.java;
 
 public class Clinic {
 	Zoo owned_zoo;
-	Clinic(Zoo _zoo)
+	public Clinic(Zoo _zoo)
 	{
 		owned_zoo = _zoo;
 	}
@@ -11,6 +11,7 @@ public class Clinic {
 		if (_animal.isHealthy())
 		{
 			owned_zoo.add(_animal);
+			return true;
 		}
 		return false;
 	}
