@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class Fabric {
 	private int last = 0;
-	Fabric(){};
+	public Fabric(){};
 	public Animals create_animal(String name, int food, boolean health, Scanner in)
 	{
-		Animals animal = new Monkey(4, 2, 3, true);
+		Animals animal = new Animals();
 		if (name.equalsIgnoreCase("Monkey"))
 		{
 			System.out.println("Введите уровень доброты по 10-бальной шкале(int)");
