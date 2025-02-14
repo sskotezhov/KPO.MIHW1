@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Zoo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ihw1</a> &gt; <a href="index.source.html" class="el_package">main.java</a> &gt; <span class="el_source">Zoo.java</span></div><h1>Zoo.java</h1><pre class="source lang-java linenums">package main.java;
+
+import java.util.ArrayList;
+
+public class Zoo {
+	private ArrayList&lt;Animals&gt; collection;
+<span class="fc" id="L7">	private int count_food = 0, count_animals = 0;</span>
+	public Zoo()
+<span class="fc" id="L9">	{</span>
+<span class="fc" id="L10">		collection = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L11">	}</span>
+	public void add(Animals animal)
+	{
+<span class="fc" id="L14">		collection.add(animal);</span>
+<span class="fc" id="L15">		count_food += animal.getFood();</span>
+<span class="fc" id="L16">		count_animals++;</span>
+<span class="fc" id="L17">	}</span>
+	public int count_food()
+	{
+<span class="fc" id="L20">		return count_food;</span>
+	}
+	public int count_animals()
+	{
+<span class="fc" id="L24">		return count_animals;</span>
+	}
+	public ArrayList&lt;Animals&gt; list_kind_animals()
+	{
+<span class="fc" id="L28">		ArrayList&lt;Animals&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">		for(int i = 0; i &lt; count_animals; i++)</span>
+		{
+<span class="fc bfc" id="L31" title="All 2 branches covered.">			if (collection.get(i).isKind())</span>
+			{
+<span class="fc" id="L33">				list.add(collection.get(i));</span>
+			}
+		}
+<span class="fc" id="L36">		return list;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ihw1,main.java,Computer,3,0,0,0,1,0,1,0,1,0
+ihw1,main.java,Main,10,0,0,0,4,0,2,0,2,0
+ihw1,main.java,Rabbit,0,18,0,0,0,7,0,1,0,1
+ihw1,main.java,Zoo,0,68,0,4,0,15,0,7,0,5
+ihw1,main.java,Animals,0,29,0,0,0,9,0,6,0,6
+ihw1,main.java,App,135,0,7,0,27,0,7,0,2,0
+ihw1,main.java,Tiger,0,15,0,0,0,6,0,1,0,1
+ihw1,main.java,Thing,6,0,0,0,2,0,2,0,2,0
+ihw1,main.java,Table,3,0,0,0,1,0,1,0,1,0
+ihw1,main.java,Herbo,0,14,0,2,0,5,0,3,0,2
+ihw1,main.java,Monkey,0,18,0,0,0,7,0,1,0,1
+ihw1,main.java,Predator,0,3,0,0,0,1,0,1,0,1
+ihw1,main.java,Wolf,0,15,0,0,0,6,0,1,0,1
+ihw1,main.java,Fabric,0,93,0,8,0,14,0,6,0,2
+ihw1,main.java,Clinic,0,17,0,2,0,7,0,3,0,2

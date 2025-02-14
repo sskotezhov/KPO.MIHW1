@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ihw1</a> &gt; <a href="index.source.html" class="el_package">main.java</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package main.java;
+import java.util.Scanner;
+
+<span class="nc" id="L4">public class App {</span>
+	public int condition;
+<span class="nc" id="L6">	private Zoo zoo = new Zoo();</span>
+<span class="nc" id="L7">	private Fabric creator = new Fabric();</span>
+<span class="nc" id="L8">	private Clinic clinic = new Clinic(zoo);</span>
+	public void start()
+	{
+<span class="nc" id="L11">		Scanner in = new Scanner(System.in);</span>
+		while(true)
+		{
+<span class="nc" id="L14">			System.out.println(&quot;Выберите действие путем ввода его номера: \n1.Добавить животное\n2.Вывести отчет о количестве животных и количестве необходимой еды\n3.Вывести список животных, пригодных для контактного зоопарка\n4.Закончить работу&quot;);</span>
+<span class="nc" id="L15">			int chosen = in.nextInt();</span>
+<span class="nc bnc" id="L16" title="All 5 branches missed.">			switch (chosen)</span>
+			{
+				case (1):
+				{
+<span class="nc" id="L20">					System.out.println(&quot;Введите тип животного(Monkey/Rabbit/Tiger/Wolf)&quot;);</span>
+<span class="nc" id="L21">					String name = in.next();</span>
+<span class="nc" id="L22">					System.out.println(&quot;Введите количество еды&quot;);</span>
+<span class="nc" id="L23">					int food = in.nextInt();</span>
+<span class="nc" id="L24">					System.out.println(&quot;Введите здорово ли животное(true/false)&quot;);</span>
+<span class="nc" id="L25">					boolean healthy = in.nextBoolean();</span>
+<span class="nc" id="L26">					clinic.append(creator.create_animal(name, food, healthy, in));</span>
+<span class="nc" id="L27">					break;</span>
+				}
+				case (2):
+				{
+<span class="nc" id="L31">					System.out.printf(&quot;В зоопарке на данный момент %d животных и для них требуется %d киллограммов еды в день\n&quot;, zoo.count_animals(), zoo.count_food());</span>
+<span class="nc" id="L32">					break;</span>
+				}
+				case (3):
+				{
+					Animals tmp;
+<span class="nc bnc" id="L37" title="All 2 branches missed.">					for (int i = 0; i &lt; zoo.list_kind_animals().size(); i++)</span>
+					{
+<span class="nc" id="L39">						tmp = zoo.list_kind_animals().get(i);</span>
+<span class="nc" id="L40">						System.out.printf(&quot;%s %d %d\n&quot;, tmp.getName(), tmp.getNumber(), tmp.getFood());</span>
+					}
+<span class="nc" id="L42">					break;</span>
+				}
+				case (4):
+				{
+<span class="nc" id="L46">					System.out.println(&quot;Работа окончена&quot;);</span>
+<span class="nc" id="L47">					return;</span>
+				}
+				default:
+				{
+<span class="nc" id="L51">					in.close();</span>
+<span class="nc" id="L52">					System.out.println(&quot;Не понял запроса&quot;);</span>
+					break;
+				}
+			} 
+<span class="nc" id="L56">		}</span>
+	}
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
